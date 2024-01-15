@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<style>
+   
+.f1{display: grid; justify-content: center;  margin-top: 150px;}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+    <form class="f1">
+   <h1>log in </h1> 
+   <label for="email">Email:</label>
+<input type="email" id="email" >
+<button type="button" onclick="verifyEmail()">Complete</button>
+<p id="verification"></p>
+</form>
+
+
+
+
+
+
+<script>
+
+
+
+function verifyEmail() {
+      var emailInput = document.getElementById('email');
+      var verification = document.getElementById('verification');
+
+      // Simple email validation
+      var email = emailInput.value.trim();
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        verification.textContent = 'Invalid email format';
+        verification.style.color = 'red';
+        return;
+      }
+
+      // Simulate email verification (in a real-world scenario, this would be done on the server)
+      setTimeout(function() {
+        verification.textContent = 'Email verified successfully!';
+        verification.style.color = 'green';
+      }, 2000);
+      setTimeout(function() {
+        verification.textContent = 'gggggg!';
+        verification.style.color = 'blue';
+      }, 3000);
+    }
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
